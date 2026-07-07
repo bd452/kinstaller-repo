@@ -1,0 +1,49 @@
+name: Deploy Repository
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          submodules: recursive
+      - name: Build repository index
+        run: |
+          pip install -r index_builder/requirements.txt
+          python index_builder/build_index.py
+      - name: Cleanup
+        run: |
+          rm -rf index_builder
+          rm -rf .github
+          rm -f README.md
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

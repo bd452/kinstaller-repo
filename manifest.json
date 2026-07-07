@@ -1,0 +1,7 @@
+{
+  "manifest_version": 1,
+  "id": "kinstallerrepo",
+  "name": "Kinstaller Repository",
+  "description": "KPM repository for Kinstaller and related Kindle homebrew packages",
+  "packages": {}
+}
