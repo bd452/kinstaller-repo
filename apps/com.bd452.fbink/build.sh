@@ -4,6 +4,7 @@ set -euo pipefail
 APP_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$APP_ROOT/../.." && pwd)"
 FBINK_SRC="$APP_ROOT/vendor/FBInk"
+FBINK_VERSION="1.25.0"
 
 # shellcheck source=../../scripts/koxtoolchain.sh
 source "$REPO_ROOT/scripts/koxtoolchain.sh"
@@ -38,19 +39,12 @@ build_platform() {
 build_platform kindlehf
 build_platform kindlepw2
 
-python3 - "$APP_ROOT/package/manifest.json" "$FBINK_SRC" <<'PY'
+python3 - "$APP_ROOT/package/manifest.json" "$FBINK_VERSION" <<'PY'
 import json
-import subprocess
 import sys
 
-manifest_path, fbink_src = sys.argv[1:3]
-tag = subprocess.check_output(
-    ["git", "-C", fbink_src, "describe", "--tags", "--abbrev=0"],
-    text=True,
-).strip()
-if tag.startswith("v"):
-    tag = tag[1:]
-version = [int(part) for part in tag.split(".")[:3]]
+manifest_path, version_str = sys.argv[1:3]
+version = [int(part) for part in version_str.split(".")[:3]]
 while len(version) < 3:
     version.append(0)
 
