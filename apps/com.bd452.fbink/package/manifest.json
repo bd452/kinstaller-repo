@@ -1,0 +1,17 @@
+{
+  "manifest_version": 1,
+  "id": "com.bd452.fbink",
+  "name": "FBInk",
+  "author": "Bryce",
+  "description": "FBInk CLI built from github.com/NiLuJe/FBInk for Kindle KPM packages",
+  "version": [
+    1,
+    25,
+    0
+  ],
+  "supported_platforms": [
+    "kindlehf",
+    "kindlepw2"
+  ],
+  "dependencies": []
+}

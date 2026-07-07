@@ -3,5 +3,50 @@
   "id": "kinstallerrepo",
   "name": "Kinstaller Repository",
   "description": "KPM repository for Kinstaller and related Kindle homebrew packages",
-  "packages": {}
+  "packages": {
+    "com.bd452.fbink": {
+      "name": "FBInk",
+      "author": "Bryce",
+      "description": "FBInk CLI built from github.com/NiLuJe/FBInk for Kindle KPM packages",
+      "artifacts": [
+        {
+          "url": "packages/com.bd452.fbink/artifacts/com.bd452.fbink_1.25.0_kindlehf-kindlepw2.kpkg",
+          "version": [
+            1,
+            25,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2"
+          ]
+        }
+      ]
+    },
+    "com.bd452.demo": {
+      "name": "Demo",
+      "author": "Bryce",
+      "description": "Minimal demo app that shows the word demo and a close button",
+      "artifacts": [
+        {
+          "url": "packages/com.bd452.demo/artifacts/com.bd452.demo_1.0.0_kindlehf-kindlepw2.kpkg",
+          "version": [
+            1,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "id": "com.bd452.fbink"
+            }
+          ],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2"
+          ]
+        }
+      ]
+    }
+  }
 }

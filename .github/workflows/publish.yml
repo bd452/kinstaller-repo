@@ -23,6 +23,10 @@ jobs:
         with:
           lfs: true
           submodules: recursive
+      - name: Install koxtoolchain
+        run: ./scripts/setup-koxtoolchain.sh
+      - name: Build packages
+        run: ./build.sh
       - name: Build repository index
         run: |
           pip install -r index_builder/requirements.txt

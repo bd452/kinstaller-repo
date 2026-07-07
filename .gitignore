@@ -1,3 +1,7 @@
 __pycache__
 /index.html
 .venv
+.DS_Store
+.kpm/
+apps/*/dist/
+apps/*/package/bin/
