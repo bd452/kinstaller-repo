@@ -24,8 +24,8 @@ if (manifest["manifest_version"] != KPM_MANIFEST_VERSION):
 assert(not ' ' in manifest["id"])
 assert(manifest["id"].isalnum())
 for package_id in manifest["packages"]:
-    for letter in package_id:
-        assert(letter.islower() and (letter.isalnum() or letter in ['-', '_', '.']))
+    for char in package_id:
+        assert char.islower() or char.isdigit() or char in "-_."
 
 with open("./index.html", 'w') as file:
     file.write(template.render({
