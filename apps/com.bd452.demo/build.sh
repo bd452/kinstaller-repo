@@ -17,12 +17,10 @@ with open(fbink_manifest_path, encoding="utf-8") as file:
 with open(demo_manifest_path, encoding="utf-8") as file:
     demo_manifest = json.load(file)
 
-max_version = [fbink_version[0] + 1, 0, 0]
-
 for dependency in demo_manifest.get("dependencies", []):
     if dependency.get("id") == "com.bd452.fbink":
         dependency["min"] = fbink_version
-        dependency["max"] = max_version
+        dependency.pop("max", None)
         break
 else:
     raise SystemExit("com.bd452.fbink dependency not found in demo manifest")
@@ -32,7 +30,7 @@ with open(demo_manifest_path, "w", encoding="utf-8") as file:
     file.write("\n")
 
 version = ".".join(str(part) for part in fbink_version)
-print(f"Synced com.bd452.fbink dependency to [{version}, {max_version[0]}.0.0)")
+print(f"Synced com.bd452.fbink dependency min to {version} (open-ended max)")
 PY
 
 python3 "$APP_ROOT/scripts/make-icon.py"
