@@ -4,9 +4,28 @@
   "name": "Demo",
   "author": "Bryce",
   "description": "Minimal demo app that shows the word demo and a close button",
-  "version": [1, 0, 0],
-  "supported_platforms": ["kindlehf", "kindlepw2"],
+  "version": [
+    1,
+    0,
+    0
+  ],
+  "supported_platforms": [
+    "kindlehf",
+    "kindlepw2"
+  ],
   "dependencies": [
-    { "id": "com.bd452.fbink" }
+    {
+      "id": "com.bd452.fbink",
+      "min": [
+        1,
+        25,
+        0
+      ],
+      "max": [
+        2,
+        0,
+        0
+      ]
+    }
   ]
 }

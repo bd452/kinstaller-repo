@@ -38,7 +38,17 @@
           ],
           "dependencies": [
             {
-              "id": "com.bd452.fbink"
+              "id": "com.bd452.fbink",
+              "min": [
+                1,
+                25,
+                0
+              ],
+              "max": [
+                2,
+                0,
+                0
+              ]
             }
           ],
           "supported_platforms": [
