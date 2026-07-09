@@ -17,6 +17,8 @@ APP_ORDER=(
     apps/com.bd452.demo
     apps/com.bd452.signalkit
     apps/com.bd452.signalkitdemo
+    apps/com.bd452.ksubstrate
+    apps/com.bd452.ksubstratedemo
 )
 
 echo "==> Building apps"

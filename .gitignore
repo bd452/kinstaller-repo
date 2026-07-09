@@ -7,6 +7,8 @@ apps/*/dist/
 apps/*/package/bin/
 apps/*/package/lib/
 apps/*/package/include/
+apps/*/package/tweaks/**/tweak.so
+apps/*/package/diagnostics/**/tweak.so
 /rust/target/
 /rust/target-kindle/
 .cursor/

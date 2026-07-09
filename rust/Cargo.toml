@@ -1,12 +1,31 @@
 [workspace]
 resolver = "2"
-members = ["fbink-sys", "signalkit", "signalkit-demo"]
+members = [
+    "dobby-sys",
+    "fbink-sys",
+    "kindle-compat",
+    "ksub",
+    "ksub-logos",
+    "ksub-syms",
+    "ksubstrate",
+    "ksubstrate-bootstrap",
+    "ksubstrate-cli",
+    "ksubstrate-demo-target",
+    "ksubstrate-probe-tweak",
+    "ksubstrate-sample-tweak",
+    "ksubstrated",
+    "signalkit",
+    "signalkit-demo",
+]
 
 [workspace.package]
 version = "0.1.0"
 edition = "2021"
 authors = ["Bryce"]
 license = "MIT"
+
+[workspace.dependencies]
+libc = "0.2"
 
 # Small binaries for space-constrained Kindle storage. panic = "unwind" is
 # required: the C ABI (signalkit/src/ffi.rs) relies on catch_unwind at the

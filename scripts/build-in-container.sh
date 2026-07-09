@@ -35,6 +35,7 @@ image_needs_rebuild() {
     # image should include rustfmt so generated bindings can be formatted.
     if ! docker run --rm --platform "$PLATFORM" "$IMAGE" bash -lc \
         'command -v clang >/dev/null &&
+         command -v cmake >/dev/null &&
          find /usr -name "libclang.so*" -o -name "libclang-*.so*" 2>/dev/null | grep -q . &&
          rustfmt --version >/dev/null' >/dev/null 2>&1; then
         echo "==> Existing $IMAGE is missing build prerequisites; rebuilding"
