@@ -5,3 +5,8 @@ __pycache__
 .kpm/
 apps/*/dist/
 apps/*/package/bin/
+apps/*/package/lib/
+apps/*/package/include/
+/rust/target/
+/rust/target-kindle/
+.cursor/

@@ -25,6 +25,20 @@ jobs:
           submodules: recursive
       - name: Install koxtoolchain
         run: ./scripts/setup-koxtoolchain.sh
+      - name: Install Rust
+        run: |
+          rustup toolchain install stable --profile minimal
+          rustup target add armv7-unknown-linux-gnueabihf armv7-unknown-linux-gnueabi
+      - name: Install libclang (for bindgen)
+        run: sudo apt-get update && sudo apt-get install -y llvm-dev libclang-dev clang
+      - name: Cache Rust build
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: rust
+      - name: Rust host tests
+        run: |
+          cargo test --manifest-path rust/Cargo.toml -p signalkit
+          cargo test --manifest-path rust/Cargo.toml -p signalkit --features capi
       - name: Build packages
         run: ./build.sh
       - name: Build repository index
@@ -35,6 +49,7 @@ jobs:
         run: |
           rm -rf index_builder
           rm -rf .github
+          rm -rf rust
           rm -f README.md
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4

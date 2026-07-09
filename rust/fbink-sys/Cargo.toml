@@ -1,0 +1,16 @@
+[package]
+name = "fbink-sys"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Minimal FFI bindings to statically-linked FBInk (vendored, v1.25.0)."
+# Declares the native library this crate links, so Cargo dedups the link flags.
+links = "fbink"
+
+[build-dependencies]
+# Bindings are generated from the vendored fbink.h at build time, targeting the
+# ARM triple, so struct layouts match the device exactly — this is the drift
+# mitigation for the hand-written-FFI risk. Bindgen runs on the build host only;
+# it does not become a runtime or cross-target dependency.
+bindgen = "0.69"

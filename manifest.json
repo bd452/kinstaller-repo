@@ -52,6 +52,46 @@
           ]
         }
       ]
+    },
+    "com.bd452.signalkit": {
+      "name": "SignalKit",
+      "author": "Bryce",
+      "description": "Reactive UI framework for Kindle (Rust port of SignalKit). Ships libsignalkit.so and a C header; FBInk is statically linked in.",
+      "artifacts": [
+        {
+          "url": "packages/com.bd452.signalkit/artifacts/com.bd452.signalkit_0.1.0_kindlehf-kindlepw2.kpkg",
+          "version": [
+            0,
+            1,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2"
+          ]
+        }
+      ]
+    },
+    "com.bd452.signalkitdemo": {
+      "name": "SignalKit Demo",
+      "author": "Bryce",
+      "description": "Interactive demo of the SignalKit UI framework: a reactive counter, a keyed list, and touch buttons.",
+      "artifacts": [
+        {
+          "url": "packages/com.bd452.signalkitdemo/artifacts/com.bd452.signalkitdemo_0.1.0_kindlehf-kindlepw2.kpkg",
+          "version": [
+            0,
+            1,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2"
+          ]
+        }
+      ]
     }
   }
 }

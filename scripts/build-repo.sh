@@ -15,6 +15,8 @@ KPM_HELPER="$REPO_ROOT/.kpm/kpm-helper.py"
 APP_ORDER=(
     apps/com.bd452.fbink
     apps/com.bd452.demo
+    apps/com.bd452.signalkit
+    apps/com.bd452.signalkitdemo
 )
 
 echo "==> Building apps"
