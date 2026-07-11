@@ -96,7 +96,7 @@
     "com.bd452.ksubstrate": {
       "name": "Kindle Substrate",
       "author": "Bryce",
-      "description": "Session-scoped native hooking runtime for jailbroken Kindles. Ships libksubstrate, the preload bootstrap, daemon, CLI, header, and tweak directory.",
+      "description": "Session-scoped native hooking runtime for jailbroken Kindles. Ships libksubstrate, the preload bootstrap, daemon, CLI, header, and a fileless Home demo.",
       "artifacts": [
         {
           "url": "packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.1_kindlehf-kindlepw2.kpkg",
@@ -130,6 +130,19 @@
             0,
             1,
             5
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2"
+          ]
+        },
+        {
+          "url": "packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.6_kindlehf-kindlepw2.kpkg",
+          "version": [
+            0,
+            1,
+            6
           ],
           "dependencies": [],
           "supported_platforms": [
@@ -202,6 +215,28 @@
                 0,
                 1,
                 5
+              ]
+            }
+          ],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2"
+          ]
+        },
+        {
+          "url": "packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.6_kindlehf-kindlepw2.kpkg",
+          "version": [
+            0,
+            1,
+            6
+          ],
+          "dependencies": [
+            {
+              "id": "com.bd452.ksubstrate",
+              "min": [
+                0,
+                1,
+                6
               ]
             }
           ],
