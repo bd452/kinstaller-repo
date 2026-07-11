@@ -22,14 +22,18 @@ if [[ ! -f "$FBINK_SRC/i2c-tools/Makefile" ]]; then
 fi
 
 # FBInk is updated by scripts/update-packages.sh to an annotated release tag.
-# Derive the package version from that tag so an upstream update cannot leave
-# the package manifest at the previous hard-coded version.
+# GitHub Actions' submodule checkout does not fetch those tag refs, so use the
+# source fallback version when the exact tag is unavailable there.
 FBINK_TAG="$(git -C "$FBINK_SRC" describe --tags --exact-match 2>/dev/null || true)"
-if [[ ! "$FBINK_TAG" =~ ^v([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
-    echo "error: FBInk checkout must be at a v<major>.<minor>.<patch> tag; found ${FBINK_TAG:-an untagged commit}" >&2
+if [[ "$FBINK_TAG" =~ ^v([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
+    FBINK_VERSION="${FBINK_TAG#v}"
+else
+    FBINK_VERSION="$(sed -nE 's/^[[:space:]]*#[[:space:]]*define[[:space:]]+FBINK_FALLBACK_VERSION[[:space:]]+"v([0-9]+\.[0-9]+\.[0-9]+)-git"/\1/p' "$FBINK_SRC/fbink_internal.h")"
+fi
+if [[ -z "$FBINK_VERSION" ]]; then
+    echo "error: could not determine the FBInk version from its tag or source" >&2
     exit 1
 fi
-FBINK_VERSION="${FBINK_TAG#v}"
 
 mkdir -p "$APP_ROOT/package/bin/kindlehf" "$APP_ROOT/package/bin/kindlepw2"
 
