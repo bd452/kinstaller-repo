@@ -15,10 +15,10 @@ repository. Kindle Substrate is also a first-party component submodule and
 contains its own nested Dobby dependency. Use `git clone --recurse-submodules`
 or `git submodule update --init --recursive` before building.
 
-SignalKit packages:
+Ember packages:
 
-- [`com.bd452.signalkit`](com.bd452.signalkit/) — `libsignalkit.so` + header
-- [`com.bd452.signalkitdemo`](com.bd452.signalkitdemo/) — interactive demo
+- [`com.bd452.ember`](../components/ember/apps/com.bd452.ember/) — `libember.so` + header
+- [`com.bd452.emberdemo`](../components/ember/apps/com.bd452.emberdemo/) — interactive demo
 
 Kindle Substrate packages:
 

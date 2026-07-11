@@ -6,7 +6,7 @@
 #
 # Usage (from repo root):
 #   ./scripts/build-in-container.sh                  # full ./build.sh
-#   ./scripts/build-in-container.sh apps/com.bd452.signalkitdemo/build.sh
+#   ./scripts/build-in-container.sh components/ember/apps/com.bd452.emberdemo/build.sh
 #   ./scripts/build-in-container.sh bash              # interactive shell
 #   ./scripts/build-in-container.sh bash -lc '…'      # custom command
 #
@@ -55,9 +55,9 @@ if [[ $# -eq 0 ]]; then
     set -- ./build.sh
 fi
 
-# Persist cargo target dir on the host so rebuilds stay warm across containers.
-# Separate from rust/target (host tests) via CARGO_TARGET_DIR.
-mkdir -p "$REPO_ROOT/rust/target-kindle"
+# Persist cross-build artifacts on the host so rebuilds stay warm across
+# containers. Component workspaces otherwise own their normal host targets.
+mkdir -p "$REPO_ROOT/target-kindle"
 
 echo "==> docker run $IMAGE — $*"
 
@@ -68,7 +68,7 @@ if [[ -t 0 && -t 1 ]]; then
         --platform "$PLATFORM" \
         -v "$REPO_ROOT":/repo \
         -e KOXTOOLCHAIN_ROOT=/opt/x-tools \
-        -e CARGO_TARGET_DIR=/repo/rust/target-kindle \
+        -e CARGO_TARGET_DIR=/repo/target-kindle \
         -w /repo \
         "$IMAGE" \
         "$@"
@@ -77,7 +77,7 @@ else
         --platform "$PLATFORM" \
         -v "$REPO_ROOT":/repo \
         -e KOXTOOLCHAIN_ROOT=/opt/x-tools \
-        -e CARGO_TARGET_DIR=/repo/rust/target-kindle \
+        -e CARGO_TARGET_DIR=/repo/target-kindle \
         -w /repo \
         "$IMAGE" \
         "$@"

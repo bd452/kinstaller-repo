@@ -53,13 +53,13 @@
         }
       ]
     },
-    "com.bd452.signalkit": {
-      "name": "SignalKit",
+    "com.bd452.ember": {
+      "name": "Ember",
       "author": "Bryce",
-      "description": "Reactive UI framework for Kindle (Rust port of SignalKit). Ships libsignalkit.so and a C header; FBInk is statically linked in.",
+      "description": "Reactive UI framework for Kindle (Rust port of Ember). Ships libember.so and a C header; FBInk is statically linked in.",
       "artifacts": [
         {
-          "url": "packages/com.bd452.signalkit/artifacts/com.bd452.signalkit_0.1.0_kindlehf-kindlepw2.kpkg",
+          "url": "packages/com.bd452.ember/artifacts/com.bd452.ember_0.1.0_kindlehf-kindlepw2.kpkg",
           "version": [
             0,
             1,
@@ -73,13 +73,13 @@
         }
       ]
     },
-    "com.bd452.signalkitdemo": {
-      "name": "SignalKit Demo",
+    "com.bd452.emberdemo": {
+      "name": "Ember Demo",
       "author": "Bryce",
-      "description": "Interactive demo of the SignalKit UI framework: a reactive counter, a keyed list, and touch buttons.",
+      "description": "Interactive demo of the Ember UI framework: a reactive counter, a keyed list, and touch buttons.",
       "artifacts": [
         {
-          "url": "packages/com.bd452.signalkitdemo/artifacts/com.bd452.signalkitdemo_0.1.0_kindlehf-kindlepw2.kpkg",
+          "url": "packages/com.bd452.emberdemo/artifacts/com.bd452.emberdemo_0.1.0_kindlehf-kindlepw2.kpkg",
           "version": [
             0,
             1,
@@ -99,50 +99,11 @@
       "description": "Session-scoped native hooking runtime for jailbroken Kindles. Ships libksubstrate, the preload bootstrap, daemon, CLI, header, and tweak directory.",
       "artifacts": [
         {
-          "url": "packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.0_kindlehf-kindlepw2.kpkg",
-          "version": [
-            0,
-            1,
-            0
-          ],
-          "dependencies": [],
-          "supported_platforms": [
-            "kindlehf",
-            "kindlepw2"
-          ]
-        },
-        {
           "url": "packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.1_kindlehf-kindlepw2.kpkg",
           "version": [
             0,
             1,
             1
-          ],
-          "dependencies": [],
-          "supported_platforms": [
-            "kindlehf",
-            "kindlepw2"
-          ]
-        },
-        {
-          "url": "packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.2_kindlehf-kindlepw2.kpkg",
-          "version": [
-            0,
-            1,
-            2
-          ],
-          "dependencies": [],
-          "supported_platforms": [
-            "kindlehf",
-            "kindlepw2"
-          ]
-        },
-        {
-          "url": "packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.3_kindlehf-kindlepw2.kpkg",
-          "version": [
-            0,
-            1,
-            3
           ],
           "dependencies": [],
           "supported_platforms": [
@@ -171,28 +132,6 @@
       "description": "Self-contained demo target and sample tweak for validating the Kindle Substrate runtime.",
       "artifacts": [
         {
-          "url": "packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.0_kindlehf-kindlepw2.kpkg",
-          "version": [
-            0,
-            1,
-            0
-          ],
-          "dependencies": [
-            {
-              "id": "com.bd452.ksubstrate",
-              "min": [
-                0,
-                1,
-                0
-              ]
-            }
-          ],
-          "supported_platforms": [
-            "kindlehf",
-            "kindlepw2"
-          ]
-        },
-        {
           "url": "packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.1_kindlehf-kindlepw2.kpkg",
           "version": [
             0,
@@ -206,50 +145,6 @@
                 0,
                 1,
                 1
-              ]
-            }
-          ],
-          "supported_platforms": [
-            "kindlehf",
-            "kindlepw2"
-          ]
-        },
-        {
-          "url": "packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.2_kindlehf-kindlepw2.kpkg",
-          "version": [
-            0,
-            1,
-            2
-          ],
-          "dependencies": [
-            {
-              "id": "com.bd452.ksubstrate",
-              "min": [
-                0,
-                1,
-                2
-              ]
-            }
-          ],
-          "supported_platforms": [
-            "kindlehf",
-            "kindlepw2"
-          ]
-        },
-        {
-          "url": "packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.3_kindlehf-kindlepw2.kpkg",
-          "version": [
-            0,
-            1,
-            3
-          ],
-          "dependencies": [
-            {
-              "id": "com.bd452.ksubstrate",
-              "min": [
-                0,
-                1,
-                3
               ]
             }
           ],

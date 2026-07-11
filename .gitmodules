@@ -4,3 +4,6 @@
 [submodule "components/kindle-substrate"]
 	path = components/kindle-substrate
 	url = https://github.com/bd452/kindle-substrate.git
+[submodule "components/ember"]
+	path = components/ember
+	url = https://github.com/bd452/ember.git

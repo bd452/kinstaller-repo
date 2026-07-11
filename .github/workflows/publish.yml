@@ -35,12 +35,12 @@ jobs:
         uses: Swatinem/rust-cache@v2
         with:
           workspaces: |
-            rust
+            components/ember
             components/kindle-substrate/rust
       - name: Rust host tests
         run: |
-          cargo test --manifest-path rust/Cargo.toml -p signalkit
-          cargo test --manifest-path rust/Cargo.toml -p signalkit --features capi
+          cargo test --manifest-path components/ember/Cargo.toml -p ember
+          cargo test --manifest-path components/ember/Cargo.toml -p ember --features capi
           cargo test --manifest-path components/kindle-substrate/rust/Cargo.toml --workspace
       - name: Build packages
         run: ./build.sh
@@ -53,6 +53,7 @@ jobs:
           rm -rf index_builder
           rm -rf .github
           rm -rf rust
+          rm -rf components
           rm -f README.md
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4

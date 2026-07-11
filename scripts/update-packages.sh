@@ -16,10 +16,10 @@ package. With a package ID, update the source submodule owned by that package,
 then rebuild it and any packages whose published dependency constraint changes.
 
 Package IDs:
-  com.bd452.fbink          (also rebuilds demo and SignalKit packages)
+  com.bd452.fbink          (also rebuilds demo and Ember packages)
   com.bd452.demo
-  com.bd452.signalkit      (also rebuilds SignalKit demo)
-  com.bd452.signalkitdemo
+  com.bd452.ember          (also rebuilds Ember demo)
+  com.bd452.emberdemo
   com.bd452.ksubstrate     (also rebuilds Kindle Substrate demo)
   com.bd452.ksubstratedemo
 EOF
@@ -47,26 +47,30 @@ git submodule update --init --recursive
 
 target="${1:-all}"
 update_fbink=false
+update_ember=false
 update_ksubstrate=false
 build_targets=()
 
 case "$target" in
     all)
         update_fbink=true
+        update_ember=true
         update_ksubstrate=true
         ;;
     com.bd452.fbink)
         update_fbink=true
-        build_targets=(com.bd452.fbink com.bd452.demo com.bd452.signalkit com.bd452.signalkitdemo)
+        build_targets=(com.bd452.fbink com.bd452.demo com.bd452.ember com.bd452.emberdemo)
         ;;
     com.bd452.demo)
         build_targets=(com.bd452.demo)
         ;;
-    com.bd452.signalkit)
-        build_targets=(com.bd452.signalkit com.bd452.signalkitdemo)
+    com.bd452.ember)
+        update_ember=true
+        build_targets=(com.bd452.ember com.bd452.emberdemo)
         ;;
-    com.bd452.signalkitdemo)
-        build_targets=(com.bd452.signalkitdemo)
+    com.bd452.emberdemo)
+        update_ember=true
+        build_targets=(com.bd452.ember com.bd452.emberdemo)
         ;;
     com.bd452.ksubstrate)
         update_ksubstrate=true
@@ -93,6 +97,12 @@ if [[ "$update_fbink" == true ]]; then
     fi
     git -C apps/com.bd452.fbink/vendor/FBInk checkout --detach "$fbink_tag"
     git -C apps/com.bd452.fbink/vendor/FBInk submodule update --init --recursive
+fi
+
+if [[ "$update_ember" == true ]]; then
+    echo "==> Updating Ember to its upstream default branch"
+    git submodule update --remote -- components/ember
+    git -C components/ember submodule update --init --recursive
 fi
 
 if [[ "$update_ksubstrate" == true ]]; then

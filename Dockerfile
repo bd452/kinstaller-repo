@@ -3,7 +3,7 @@
 # Build (from the repo root; always force amd64 on Apple Silicon):
 #   docker build --platform linux/amd64 -t kinstaller-build .
 #
-# See rust/signalkit/docs/building.md for run recipes.
+# See components/ember/ember/docs/building.md for Ember run recipes.
 FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=noninteractive

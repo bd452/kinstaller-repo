@@ -33,8 +33,8 @@ KPM_HELPER="$REPO_ROOT/.kpm/kpm-helper.py"
 APP_ORDER=(
     apps/com.bd452.fbink
     apps/com.bd452.demo
-    apps/com.bd452.signalkit
-    apps/com.bd452.signalkitdemo
+    components/ember/apps/com.bd452.ember
+    components/ember/apps/com.bd452.emberdemo
     components/kindle-substrate/apps/com.bd452.ksubstrate
     components/kindle-substrate/apps/com.bd452.ksubstratedemo
 )
@@ -42,8 +42,8 @@ APP_ORDER=(
 declare -A APP_BY_ID=(
     [com.bd452.fbink]=apps/com.bd452.fbink
     [com.bd452.demo]=apps/com.bd452.demo
-    [com.bd452.signalkit]=apps/com.bd452.signalkit
-    [com.bd452.signalkitdemo]=apps/com.bd452.signalkitdemo
+    [com.bd452.ember]=components/ember/apps/com.bd452.ember
+    [com.bd452.emberdemo]=components/ember/apps/com.bd452.emberdemo
     [com.bd452.ksubstrate]=components/kindle-substrate/apps/com.bd452.ksubstrate
     [com.bd452.ksubstratedemo]=components/kindle-substrate/apps/com.bd452.ksubstratedemo
 )
@@ -85,7 +85,9 @@ fi
 
 echo "==> Publishing .kpkg artifacts into packages/"
 for app_path in "${TARGET_APPS[@]}"; do
-    kpkg="$(find "$app_path/dist" -maxdepth 1 -name '*.kpkg' -print -quit)"
+    # A package build may leave older archives in dist/. Select the newest one
+    # produced by this build rather than whichever directory entry find sees.
+    kpkg="$(ls -t "$app_path"/dist/*.kpkg 2>/dev/null | head -n 1)"
     if [[ -z "$kpkg" ]]; then
         echo "error: no .kpkg found in $app_path/dist" >&2
         exit 1
