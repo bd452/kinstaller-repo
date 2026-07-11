@@ -136,6 +136,19 @@
             "kindlehf",
             "kindlepw2"
           ]
+        },
+        {
+          "url": "packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.3_kindlehf-kindlepw2.kpkg",
+          "version": [
+            0,
+            1,
+            3
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2"
+          ]
         }
       ]
     },
@@ -202,6 +215,28 @@
                 0,
                 1,
                 2
+              ]
+            }
+          ],
+          "supported_platforms": [
+            "kindlehf",
+            "kindlepw2"
+          ]
+        },
+        {
+          "url": "packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.3_kindlehf-kindlepw2.kpkg",
+          "version": [
+            0,
+            1,
+            3
+          ],
+          "dependencies": [
+            {
+              "id": "com.bd452.ksubstrate",
+              "min": [
+                0,
+                1,
+                3
               ]
             }
           ],
