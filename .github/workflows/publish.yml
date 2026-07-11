@@ -34,11 +34,14 @@ jobs:
       - name: Cache Rust build
         uses: Swatinem/rust-cache@v2
         with:
-          workspaces: rust
+          workspaces: |
+            rust
+            components/kindle-substrate/rust
       - name: Rust host tests
         run: |
           cargo test --manifest-path rust/Cargo.toml -p signalkit
           cargo test --manifest-path rust/Cargo.toml -p signalkit --features capi
+          cargo test --manifest-path components/kindle-substrate/rust/Cargo.toml --workspace
       - name: Build packages
         run: ./build.sh
       - name: Build repository index

@@ -67,10 +67,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "dobby-sys"
-version = "0.1.0"
-
-[[package]]
 name = "either"
 version = "1.16.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -115,81 +111,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ba291022dbbd398a455acf126c1e341954079855bc60dfdda641363bd6922569"
 dependencies = [
  "either",
-]
-
-[[package]]
-name = "kindle-compat"
-version = "0.1.0"
-dependencies = [
- "libc",
-]
-
-[[package]]
-name = "ksub"
-version = "0.1.0"
-dependencies = [
- "ksub-syms",
-]
-
-[[package]]
-name = "ksub-logos"
-version = "0.1.0"
-
-[[package]]
-name = "ksub-syms"
-version = "0.1.0"
-
-[[package]]
-name = "ksubstrate"
-version = "0.1.0"
-dependencies = [
- "dobby-sys",
- "kindle-compat",
- "libc",
-]
-
-[[package]]
-name = "ksubstrate-bootstrap"
-version = "0.1.0"
-dependencies = [
- "ksubstrate",
- "libc",
-]
-
-[[package]]
-name = "ksubstrate-cli"
-version = "0.1.0"
-dependencies = [
- "kindle-compat",
-]
-
-[[package]]
-name = "ksubstrate-demo-target"
-version = "0.1.0"
-dependencies = [
- "kindle-compat",
-]
-
-[[package]]
-name = "ksubstrate-probe-tweak"
-version = "0.1.0"
-dependencies = [
- "kindle-compat",
-]
-
-[[package]]
-name = "ksubstrate-sample-tweak"
-version = "0.1.0"
-dependencies = [
- "kindle-compat",
-]
-
-[[package]]
-name = "ksubstrated"
-version = "0.1.0"
-dependencies = [
- "kindle-compat",
- "libc",
 ]
 
 [[package]]

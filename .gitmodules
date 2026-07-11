@@ -1,6 +1,6 @@
 [submodule "apps/com.bd452.fbink/vendor/FBInk"]
 	path = apps/com.bd452.fbink/vendor/FBInk
 	url = https://github.com/NiLuJe/FBInk.git
-[submodule "apps/com.bd452.ksubstrate/vendor/Dobby"]
-	path = apps/com.bd452.ksubstrate/vendor/Dobby
-	url = https://github.com/jmpews/Dobby.git
+[submodule "components/kindle-substrate"]
+	path = components/kindle-substrate
+	url = https://github.com/bd452/kindle-substrate.git
