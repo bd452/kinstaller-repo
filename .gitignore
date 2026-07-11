@@ -12,3 +12,4 @@ apps/*/package/diagnostics/**/tweak.so
 /rust/target/
 /rust/target-kindle/
 .cursor/
+/docs/ember-extraction-plan.md
