@@ -4,7 +4,6 @@ set -euo pipefail
 APP_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$APP_ROOT/../.." && pwd)"
 FBINK_SRC="$APP_ROOT/vendor/FBInk"
-FBINK_VERSION="1.25.0"
 
 # shellcheck source=../../scripts/koxtoolchain.sh
 source "$REPO_ROOT/scripts/koxtoolchain.sh"
@@ -21,6 +20,16 @@ if [[ ! -f "$FBINK_SRC/i2c-tools/Makefile" ]]; then
     echo "Run: git submodule update --init --recursive" >&2
     exit 1
 fi
+
+# FBInk is updated by scripts/update-packages.sh to an annotated release tag.
+# Derive the package version from that tag so an upstream update cannot leave
+# the package manifest at the previous hard-coded version.
+FBINK_TAG="$(git -C "$FBINK_SRC" describe --tags --exact-match 2>/dev/null || true)"
+if [[ ! "$FBINK_TAG" =~ ^v([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
+    echo "error: FBInk checkout must be at a v<major>.<minor>.<patch> tag; found ${FBINK_TAG:-an untagged commit}" >&2
+    exit 1
+fi
+FBINK_VERSION="${FBINK_TAG#v}"
 
 mkdir -p "$APP_ROOT/package/bin/kindlehf" "$APP_ROOT/package/bin/kindlepw2"
 

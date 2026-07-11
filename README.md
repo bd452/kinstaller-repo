@@ -81,6 +81,47 @@ SignalKit / demo packaging details: [`rust/signalkit/docs/building.md`](rust/sig
 Then commit `manifest.json`, `packages/`, and any updated app manifests, and push.
 GitHub Actions rebuilds the web index and publishes to GitHub Pages.
 
+## Updating package sources and preparing a release
+
+Use the update workflow to advance source submodules and rebuild the generated
+package repository. It never commits, pushes, tags, or creates a hosted release.
+Start from a clean worktree:
+
+```bash
+# On Linux x86_64 with the toolchain installed:
+./scripts/update-packages.sh
+
+# On macOS:
+./scripts/build-in-container.sh ./scripts/update-packages.sh
+```
+
+To update a package source and rebuild only its affected package set, pass its
+published package ID. For example, updating FBInk also rebuilds the demo and
+SignalKit packages that use it; updating Kindle Substrate also rebuilds its demo:
+
+```bash
+./scripts/update-packages.sh com.bd452.fbink
+./scripts/update-packages.sh com.bd452.ksubstrate
+```
+
+Packages without an independently updateable source submodule are simply
+rebuilt; the Kindle Substrate demo also rebuilds its runtime prerequisite.
+
+FBInk advances to its newest `v<major>.<minor>.<patch>` release tag. Kindle
+Substrate advances to its upstream default branch; its nested Dobby dependency
+remains at the commit pinned by Kindle Substrate because newer Dobby revisions
+are not compatible with the package build.
+
+After reviewing the resulting diff, create a local release commit without any
+external publication side effects:
+
+```bash
+./scripts/prepare-release.sh "Update package sources"
+```
+
+Push that commit, create a tag, and create a hosted release separately when
+you are ready to publish.
+
 ## Installing packages
 
 ```text
