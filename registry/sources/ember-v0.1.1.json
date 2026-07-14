@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "repository": "bd452/ember",
+  "source": {
+    "repository": "bd452/ember",
+    "commit": "133d8ba32886a06609d06dc1b58a6f0a48724c16",
+    "tag": "v0.1.1"
+  },
+  "packages": [
+    {
+      "id": "com.bd452.ember",
+      "name": "Ember",
+      "author": "Bryce",
+      "description": "Reactive UI framework for Kindle (Rust port of Ember). Ships libember.so and a C header; FBInk is statically linked in.",
+      "version": [
+        0,
+        1,
+        1
+      ],
+      "dependencies": [],
+      "supported_platforms": [
+        "kindlehf",
+        "kindlepw2"
+      ],
+      "artifact": {
+        "filename": "com.bd452.ember_0.1.1_kindlehf-kindlepw2.kpkg",
+        "url": "https://github.com/bd452/ember/releases/download/v0.1.1/com.bd452.ember_0.1.1_kindlehf-kindlepw2.kpkg",
+        "sha256": "911e037427ed836fae0587485418e4b6ec90a877b5e1082485611caf3ffd20f3",
+        "size": 747520
+      }
+    },
+    {
+      "id": "com.bd452.emberdemo",
+      "name": "Ember Demo",
+      "author": "Bryce",
+      "description": "Interactive demo of the Ember UI framework: a reactive counter, a keyed list, and touch buttons.",
+      "version": [
+        0,
+        1,
+        1
+      ],
+      "dependencies": [],
+      "supported_platforms": [
+        "kindlehf",
+        "kindlepw2"
+      ],
+      "artifact": {
+        "filename": "com.bd452.emberdemo_0.1.1_kindlehf-kindlepw2.kpkg",
+        "url": "https://github.com/bd452/ember/releases/download/v0.1.1/com.bd452.emberdemo_0.1.1_kindlehf-kindlepw2.kpkg",
+        "sha256": "27bdce2763804c81c6382059e80c778d8cfea065135efe99b1fd0de1492a3e33",
+        "size": 1239040
+      }
+    }
+  ]
+}

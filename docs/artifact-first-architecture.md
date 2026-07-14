@@ -18,10 +18,9 @@ The pre-migration package history is preserved byte-for-byte in the
 `legacy-artifacts-v1` GitHub Release. Its descriptors retain the original
 source commit and tag provenance while pointing to those archival assets.
 
-The existing `apps/`, `components/`, and `scripts/build-repo.sh` flow remains a
-temporary compatibility path while each package source gains an independent
-release. New first-party components must use release descriptors instead of
-source submodules.
+There is no local source-build compatibility path. New and updated packages
+must arrive as reviewed release descriptors from an independent source
+repository.
 
 ## Ownership
 
@@ -32,5 +31,4 @@ source submodules.
 - This repository owns reviewed artifact pins, catalog metadata, the generated
   KPM manifest, and Pages deployment.
 
-`manifest.json` is generated. Do not hand-edit its package entries after the
-descriptor migration is complete.
+`manifest.json` is generated. Do not hand-edit its package entries.

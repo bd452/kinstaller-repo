@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "repository": "bd452/kindle-fbink-kpm",
+  "source": {
+    "repository": "bd452/kindle-fbink-kpm",
+    "commit": "223ffc61f144098984fa9976d199b74d41b2c79c",
+    "tag": "v1.25.1"
+  },
+  "packages": [
+    {
+      "id": "com.bd452.demo",
+      "name": "Demo",
+      "author": "Bryce",
+      "description": "Minimal demo app that shows the word demo and a close button",
+      "version": [
+        1,
+        0,
+        1
+      ],
+      "dependencies": [
+        {
+          "id": "com.bd452.fbink",
+          "min": [
+            1,
+            25,
+            1
+          ]
+        }
+      ],
+      "supported_platforms": [
+        "kindlehf",
+        "kindlepw2"
+      ],
+      "artifact": {
+        "filename": "com.bd452.demo_1.0.1_kindlehf-kindlepw2.kpkg",
+        "url": "https://github.com/bd452/kindle-fbink-kpm/releases/download/v1.25.1/com.bd452.demo_1.0.1_kindlehf-kindlepw2.kpkg",
+        "sha256": "eb8064960c1e13134acb3a9e6decc6d327b80e28f511c904d13aa584251355ea",
+        "size": 10240
+      }
+    },
+    {
+      "id": "com.bd452.fbink",
+      "name": "FBInk",
+      "author": "Bryce",
+      "description": "FBInk v1.25.0 CLI packaged for Kindle KPM (packaging revision 1)",
+      "version": [
+        1,
+        25,
+        1
+      ],
+      "dependencies": [],
+      "supported_platforms": [
+        "kindlehf",
+        "kindlepw2"
+      ],
+      "artifact": {
+        "filename": "com.bd452.fbink_1.25.1_kindlehf-kindlepw2.kpkg",
+        "url": "https://github.com/bd452/kindle-fbink-kpm/releases/download/v1.25.1/com.bd452.fbink_1.25.1_kindlehf-kindlepw2.kpkg",
+        "sha256": "80b3c95048a4b65e1260a23c658e8974801dbb3e5af0979c71894911d75f745f",
+        "size": 2232320
+      }
+    }
+  ]
+}
