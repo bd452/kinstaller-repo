@@ -91,7 +91,8 @@ On macOS, use the repo Docker image (Ubuntu + Rust + koxtoolchain + clang):
 ```
 
 The transitional source-build Dockerfile inherits the pinned
-`ghcr.io/bd452/kindle-kpm-build:v0.1.0` image from `kindle-kpm-devkit`.
+`ghcr.io/bd452/kindle-kpm-build:v0.1.0@sha256:c7bd7e4041717bb16765b97d6fe4f578f40d144fa3628fcad81271e22f18a69b`
+image from `kindle-kpm-devkit`.
 
 The helper builds or refreshes `kinstaller-repo-build:kpm-devkit-0.1.0` when needed and mounts
 the repo with `CARGO_TARGET_DIR=components/ember/target-kindle` for Ember builds.
