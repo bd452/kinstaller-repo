@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "repository": "bd452/kinstaller-repo",
+  "source": {
+    "repository": "bd452/kinstaller-repo",
+    "commit": "eeac793e32eac1527a7e8dc38427f647e1ac9056",
+    "tag": "legacy-pages"
+  },
+  "packages": [
+    {
+      "id": "com.bd452.emberdemo",
+      "name": "Ember Demo",
+      "author": "Bryce",
+      "description": "Interactive demo of the Ember UI framework: a reactive counter, a keyed list, and touch buttons.",
+      "version": [
+        0,
+        1,
+        0
+      ],
+      "dependencies": [],
+      "supported_platforms": [
+        "kindlehf",
+        "kindlepw2"
+      ],
+      "artifact": {
+        "filename": "com.bd452.emberdemo_0.1.0_kindlehf-kindlepw2.kpkg",
+        "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.emberdemo/artifacts/com.bd452.emberdemo_0.1.0_kindlehf-kindlepw2.kpkg",
+        "sha256": "fce005945afe1e8651d03b056e25372f3ef6020b132dc7a930ad8d8cd9d01e29",
+        "size": 972800
+      }
+    }
+  ]
+}

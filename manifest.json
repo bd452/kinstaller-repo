@@ -1,8 +1,8 @@
 {
   "manifest_version": 1,
   "id": "kinstallerrepo",
-  "name": "Kinstaller Repository",
-  "description": "KPM repository for Kinstaller and related Kindle homebrew packages",
+  "name": "BD452 Kindle Packages",
+  "description": "KPM repository for BD452 Kindle software and related homebrew packages",
   "packages": {
     "com.bd452.fbink": {
       "name": "FBInk",
@@ -10,7 +10,7 @@
       "description": "FBInk CLI built from github.com/NiLuJe/FBInk for Kindle KPM packages",
       "artifacts": [
         {
-          "url": "packages/com.bd452.fbink/artifacts/com.bd452.fbink_1.25.0_kindlehf-kindlepw2.kpkg",
+          "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.fbink/artifacts/com.bd452.fbink_1.25.0_kindlehf-kindlepw2.kpkg",
           "version": [
             1,
             25,
@@ -30,7 +30,7 @@
       "description": "Minimal demo app that shows the word demo and a close button",
       "artifacts": [
         {
-          "url": "packages/com.bd452.demo/artifacts/com.bd452.demo_1.0.0_kindlehf-kindlepw2.kpkg",
+          "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.demo/artifacts/com.bd452.demo_1.0.0_kindlehf-kindlepw2.kpkg",
           "version": [
             1,
             0,
@@ -59,7 +59,7 @@
       "description": "Reactive UI framework for Kindle (Rust port of Ember). Ships libember.so and a C header; FBInk is statically linked in.",
       "artifacts": [
         {
-          "url": "packages/com.bd452.ember/artifacts/com.bd452.ember_0.1.0_kindlehf-kindlepw2.kpkg",
+          "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ember/artifacts/com.bd452.ember_0.1.0_kindlehf-kindlepw2.kpkg",
           "version": [
             0,
             1,
@@ -79,7 +79,7 @@
       "description": "Interactive demo of the Ember UI framework: a reactive counter, a keyed list, and touch buttons.",
       "artifacts": [
         {
-          "url": "packages/com.bd452.emberdemo/artifacts/com.bd452.emberdemo_0.1.0_kindlehf-kindlepw2.kpkg",
+          "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.emberdemo/artifacts/com.bd452.emberdemo_0.1.0_kindlehf-kindlepw2.kpkg",
           "version": [
             0,
             1,
@@ -99,7 +99,7 @@
       "description": "Session-scoped native hooking runtime for jailbroken Kindles. Ships libksubstrate, the preload bootstrap, daemon, CLI, header, and a fileless Home demo.",
       "artifacts": [
         {
-          "url": "packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.1_kindlehf-kindlepw2.kpkg",
+          "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.1_kindlehf-kindlepw2.kpkg",
           "version": [
             0,
             1,
@@ -112,7 +112,7 @@
           ]
         },
         {
-          "url": "packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.4_kindlehf-kindlepw2.kpkg",
+          "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.4_kindlehf-kindlepw2.kpkg",
           "version": [
             0,
             1,
@@ -125,7 +125,7 @@
           ]
         },
         {
-          "url": "packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.5_kindlehf-kindlepw2.kpkg",
+          "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.5_kindlehf-kindlepw2.kpkg",
           "version": [
             0,
             1,
@@ -138,7 +138,7 @@
           ]
         },
         {
-          "url": "packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.6_kindlehf-kindlepw2.kpkg",
+          "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.6_kindlehf-kindlepw2.kpkg",
           "version": [
             0,
             1,
@@ -158,7 +158,7 @@
       "description": "Self-contained demo target and sample tweak for validating the Kindle Substrate runtime.",
       "artifacts": [
         {
-          "url": "packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.1_kindlehf-kindlepw2.kpkg",
+          "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.1_kindlehf-kindlepw2.kpkg",
           "version": [
             0,
             1,
@@ -180,7 +180,7 @@
           ]
         },
         {
-          "url": "packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.4_kindlehf-kindlepw2.kpkg",
+          "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.4_kindlehf-kindlepw2.kpkg",
           "version": [
             0,
             1,
@@ -202,7 +202,7 @@
           ]
         },
         {
-          "url": "packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.5_kindlehf-kindlepw2.kpkg",
+          "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.5_kindlehf-kindlepw2.kpkg",
           "version": [
             0,
             1,
@@ -224,7 +224,7 @@
           ]
         },
         {
-          "url": "packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.6_kindlehf-kindlepw2.kpkg",
+          "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.6_kindlehf-kindlepw2.kpkg",
           "version": [
             0,
             1,

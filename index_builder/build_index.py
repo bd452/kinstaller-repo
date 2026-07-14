@@ -1,5 +1,8 @@
 from jinja2 import Environment, PackageLoader, select_autoescape
-import tomllib
+try:
+    import tomllib
+except ModuleNotFoundError:  # Python 3.10 and earlier
+    import tomli as tomllib
 import json
 
 KPM_MANIFEST_VERSION = 1

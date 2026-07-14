@@ -1,0 +1,30 @@
+name: Rebuild legacy package sources
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/bd452/kindle-kpm-build:v0.1.0
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          submodules: recursive
+
+      - name: Build legacy packages
+        run: ./build.sh
+
+      - name: Upload reviewable package tree
+        uses: actions/upload-artifact@v4
+        with:
+          name: legacy-package-rebuild
+          path: |
+            manifest.json
+            packages/**

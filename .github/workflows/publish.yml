@@ -18,47 +18,37 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout registry
+        uses: actions/checkout@v4
+
+      - name: Checkout pinned KPM devkit
         uses: actions/checkout@v4
         with:
-          lfs: true
-          submodules: recursive
-      - name: Install koxtoolchain
-        run: ./scripts/setup-koxtoolchain.sh
-      - name: Install Rust
+          repository: bd452/kindle-kpm-devkit
+          ref: v0.1.0
+          path: .kpm-devkit
+
+      - name: Add kpm-dev to PATH
+        run: echo "$GITHUB_WORKSPACE/.kpm-devkit/bin" >> "$GITHUB_PATH"
+
+      - name: Generate and validate KPM manifest
         run: |
-          rustup toolchain install stable --profile minimal
-          rustup target add armv7-unknown-linux-gnueabihf armv7-unknown-linux-gnueabi
-      - name: Install libclang (for bindgen)
-        run: sudo apt-get update && sudo apt-get install -y llvm-dev libclang-dev clang
-      - name: Cache Rust build
-        uses: Swatinem/rust-cache@v2
-        with:
-          workspaces: |
-            components/ember
-            components/kindle-substrate/rust
-      - name: Rust host tests
-        run: |
-          cargo test --manifest-path components/ember/Cargo.toml -p ember
-          cargo test --manifest-path components/ember/Cargo.toml -p ember --features capi
-          cargo test --manifest-path components/kindle-substrate/rust/Cargo.toml --workspace
-      - name: Build packages
-        run: ./build.sh
+          python3 scripts/verify-pinned-artifacts.py
+          ./scripts/build-registry.sh
+          git diff --exit-code -- manifest.json
+
       - name: Build repository index
         run: |
           pip install -r index_builder/requirements.txt
           python index_builder/build_index.py
-      - name: Cleanup
-        run: |
-          rm -rf index_builder
-          rm -rf .github
-          rm -rf rust
-          rm -rf components
-          rm -f README.md
-      - name: Upload artifact
+
+      - name: Stage Pages site
+        run: ./scripts/stage-site.sh
+
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: site
 
   deploy:
     environment:

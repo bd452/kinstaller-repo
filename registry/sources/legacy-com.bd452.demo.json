@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "repository": "bd452/kinstaller-repo",
+  "source": {
+    "repository": "bd452/kinstaller-repo",
+    "commit": "eeac793e32eac1527a7e8dc38427f647e1ac9056",
+    "tag": "legacy-pages"
+  },
+  "packages": [
+    {
+      "id": "com.bd452.demo",
+      "name": "Demo",
+      "author": "Bryce",
+      "description": "Minimal demo app that shows the word demo and a close button",
+      "version": [
+        1,
+        0,
+        0
+      ],
+      "dependencies": [
+        {
+          "id": "com.bd452.fbink",
+          "min": [
+            1,
+            25,
+            0
+          ]
+        }
+      ],
+      "supported_platforms": [
+        "kindlehf",
+        "kindlepw2"
+      ],
+      "artifact": {
+        "filename": "com.bd452.demo_1.0.0_kindlehf-kindlepw2.kpkg",
+        "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.demo/artifacts/com.bd452.demo_1.0.0_kindlehf-kindlepw2.kpkg",
+        "sha256": "74294a5e1d93bd5e61dc6438bc2cfa80f892e3694ac6934312f281a81e6410fb",
+        "size": 20480
+      }
+    }
+  ]
+}
