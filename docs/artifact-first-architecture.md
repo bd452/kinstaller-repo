@@ -11,9 +11,12 @@ repository.
 3. This repository pins reviewed release descriptors under `registry/sources/`.
 4. `scripts/build-registry.sh` validates the combined dependency graph and
    generates `manifest.json` without rebuilding or copying source projects.
-5. GitHub Pages publishes the manifest and browsing UI. Artifact URLs may point
-   to GitHub Releases, object storage, or transitional files already hosted by
-   this Pages site.
+5. CI downloads every pinned artifact and verifies its declared byte size and
+   SHA-256 digest before GitHub Pages publishes the manifest and browsing UI.
+
+The pre-migration package history is preserved byte-for-byte in the
+`legacy-artifacts-v1` GitHub Release. Its descriptors retain the original
+source commit and tag provenance while pointing to those archival assets.
 
 The existing `apps/`, `components/`, and `scripts/build-repo.sh` flow remains a
 temporary compatibility path while each package source gains an independent

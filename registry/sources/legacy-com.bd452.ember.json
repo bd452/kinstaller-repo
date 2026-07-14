@@ -24,7 +24,7 @@
       ],
       "artifact": {
         "filename": "com.bd452.ember_0.1.0_kindlehf-kindlepw2.kpkg",
-        "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ember/artifacts/com.bd452.ember_0.1.0_kindlehf-kindlepw2.kpkg",
+        "url": "https://github.com/bd452/kinstaller-repo/releases/download/legacy-artifacts-v1/com.bd452.ember_0.1.0_kindlehf-kindlepw2.kpkg",
         "sha256": "5a6a5937c0986bce7f93a349fa9efdea6394a22e1defee07f879b881f912a1a9",
         "size": 747520
       }

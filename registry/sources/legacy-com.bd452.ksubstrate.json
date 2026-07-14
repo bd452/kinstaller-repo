@@ -24,7 +24,7 @@
       ],
       "artifact": {
         "filename": "com.bd452.ksubstrate_0.1.1_kindlehf-kindlepw2.kpkg",
-        "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.1_kindlehf-kindlepw2.kpkg",
+        "url": "https://github.com/bd452/kinstaller-repo/releases/download/legacy-artifacts-v1/com.bd452.ksubstrate_0.1.1_kindlehf-kindlepw2.kpkg",
         "sha256": "e35b7c5daa7749d51b4f2cbd7b5c25fe49a07b8eaa1ae6be096ee9f63f488a16",
         "size": 3891200
       }
@@ -46,7 +46,7 @@
       ],
       "artifact": {
         "filename": "com.bd452.ksubstrate_0.1.4_kindlehf-kindlepw2.kpkg",
-        "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.4_kindlehf-kindlepw2.kpkg",
+        "url": "https://github.com/bd452/kinstaller-repo/releases/download/legacy-artifacts-v1/com.bd452.ksubstrate_0.1.4_kindlehf-kindlepw2.kpkg",
         "sha256": "ad3f6390d048e519049a775901aea987232abc77d80513b0b9ae2639200a3a4a",
         "size": 4167680
       }
@@ -68,7 +68,7 @@
       ],
       "artifact": {
         "filename": "com.bd452.ksubstrate_0.1.5_kindlehf-kindlepw2.kpkg",
-        "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.5_kindlehf-kindlepw2.kpkg",
+        "url": "https://github.com/bd452/kinstaller-repo/releases/download/legacy-artifacts-v1/com.bd452.ksubstrate_0.1.5_kindlehf-kindlepw2.kpkg",
         "sha256": "1a9bf6007bb83e3dc50ef65ef9476d97e3bd864896e90f79879f9e6ba097fc4e",
         "size": 4167680
       }
@@ -90,7 +90,7 @@
       ],
       "artifact": {
         "filename": "com.bd452.ksubstrate_0.1.6_kindlehf-kindlepw2.kpkg",
-        "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstrate/artifacts/com.bd452.ksubstrate_0.1.6_kindlehf-kindlepw2.kpkg",
+        "url": "https://github.com/bd452/kinstaller-repo/releases/download/legacy-artifacts-v1/com.bd452.ksubstrate_0.1.6_kindlehf-kindlepw2.kpkg",
         "sha256": "b3126bfc1980e8ea5d1a0aa05819227ae145cd720e4ccb965565aa53df90637e",
         "size": 4925440
       }
