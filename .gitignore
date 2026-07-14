@@ -10,5 +10,6 @@ apps/*/package/include/
 apps/*/package/tweaks/**/tweak.so
 apps/*/package/diagnostics/**/tweak.so
 /target-kindle/
+/site/
 .cursor/
 /docs/ember-extraction-plan.md

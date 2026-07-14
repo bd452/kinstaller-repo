@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "repository": "bd452/kinstaller-repo",
+  "source": {
+    "repository": "bd452/kinstaller-repo",
+    "commit": "eeac793e32eac1527a7e8dc38427f647e1ac9056",
+    "tag": "legacy-pages"
+  },
+  "packages": [
+    {
+      "id": "com.bd452.ember",
+      "name": "Ember",
+      "author": "Bryce",
+      "description": "Reactive UI framework for Kindle (Rust port of Ember). Ships libember.so and a C header; FBInk is statically linked in.",
+      "version": [
+        0,
+        1,
+        0
+      ],
+      "dependencies": [],
+      "supported_platforms": [
+        "kindlehf",
+        "kindlepw2"
+      ],
+      "artifact": {
+        "filename": "com.bd452.ember_0.1.0_kindlehf-kindlepw2.kpkg",
+        "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ember/artifacts/com.bd452.ember_0.1.0_kindlehf-kindlepw2.kpkg",
+        "sha256": "5a6a5937c0986bce7f93a349fa9efdea6394a22e1defee07f879b881f912a1a9",
+        "size": 747520
+      }
+    }
+  ]
+}
