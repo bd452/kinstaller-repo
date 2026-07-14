@@ -24,7 +24,7 @@
       ],
       "artifact": {
         "filename": "com.bd452.fbink_1.25.0_kindlehf-kindlepw2.kpkg",
-        "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.fbink/artifacts/com.bd452.fbink_1.25.0_kindlehf-kindlepw2.kpkg",
+        "url": "https://github.com/bd452/kinstaller-repo/releases/download/legacy-artifacts-v1/com.bd452.fbink_1.25.0_kindlehf-kindlepw2.kpkg",
         "sha256": "aeae494a9528470a520a9cffa16741415fff858b32e358ca29be6a144efe6f75",
         "size": 2242560
       }

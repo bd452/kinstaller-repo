@@ -45,8 +45,11 @@ python3 index_builder/build_index.py
 `scripts/kpm-dev` resolves the pinned `kindle-kpm-devkit` version from
 `KPM_DEV`, `PATH`, or a sibling checkout.
 
-GitHub Pages serves the committed `packages/` tree. Symlinks are not used because
-GitHub Pages does not reliably follow them.
+The committed `packages/` tree remains staged during the transition, but the
+historical descriptors now resolve through the immutable
+[`legacy-artifacts-v1`](https://github.com/bd452/kinstaller-repo/releases/tag/legacy-artifacts-v1)
+release. CI downloads every pinned artifact and verifies its exact byte size and
+SHA-256 digest before deploying the catalog.
 
 ## Legacy source builds
 

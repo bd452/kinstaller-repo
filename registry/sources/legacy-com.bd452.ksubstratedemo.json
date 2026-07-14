@@ -33,7 +33,7 @@
       ],
       "artifact": {
         "filename": "com.bd452.ksubstratedemo_0.1.1_kindlehf-kindlepw2.kpkg",
-        "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.1_kindlehf-kindlepw2.kpkg",
+        "url": "https://github.com/bd452/kinstaller-repo/releases/download/legacy-artifacts-v1/com.bd452.ksubstratedemo_0.1.1_kindlehf-kindlepw2.kpkg",
         "sha256": "8d71798309ce23a3a1cb635f06da0558b292a6e156e591adaa7e864702331a95",
         "size": 870400
       }
@@ -64,7 +64,7 @@
       ],
       "artifact": {
         "filename": "com.bd452.ksubstratedemo_0.1.4_kindlehf-kindlepw2.kpkg",
-        "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.4_kindlehf-kindlepw2.kpkg",
+        "url": "https://github.com/bd452/kinstaller-repo/releases/download/legacy-artifacts-v1/com.bd452.ksubstratedemo_0.1.4_kindlehf-kindlepw2.kpkg",
         "sha256": "0a148ee336871d0788fe48907a0d0d099bb082d583b8e2780d455856d61eafbc",
         "size": 1146880
       }
@@ -95,7 +95,7 @@
       ],
       "artifact": {
         "filename": "com.bd452.ksubstratedemo_0.1.5_kindlehf-kindlepw2.kpkg",
-        "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.5_kindlehf-kindlepw2.kpkg",
+        "url": "https://github.com/bd452/kinstaller-repo/releases/download/legacy-artifacts-v1/com.bd452.ksubstratedemo_0.1.5_kindlehf-kindlepw2.kpkg",
         "sha256": "9a5a787dcfe9a5c486dd577c504e031a0d3fc8d841f048d7818ab24344592772",
         "size": 1146880
       }
@@ -126,7 +126,7 @@
       ],
       "artifact": {
         "filename": "com.bd452.ksubstratedemo_0.1.6_kindlehf-kindlepw2.kpkg",
-        "url": "https://bd452.github.io/kinstaller-repo/packages/com.bd452.ksubstratedemo/artifacts/com.bd452.ksubstratedemo_0.1.6_kindlehf-kindlepw2.kpkg",
+        "url": "https://github.com/bd452/kinstaller-repo/releases/download/legacy-artifacts-v1/com.bd452.ksubstratedemo_0.1.6_kindlehf-kindlepw2.kpkg",
         "sha256": "6825d6dea3e7fbc81a23e6df6b51f804f014bf2b2b8b28b616425e542102e780",
         "size": 1146880
       }
